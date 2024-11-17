@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
 import forms from '@tailwindcss/forms';
 
@@ -59,7 +60,7 @@ export default {
   		}
   	},
   	container: {
-  		center: 'true',
+		center: true,
   		padding: '1.5rem',
   		screens: {
   			'2xl': '1440px'

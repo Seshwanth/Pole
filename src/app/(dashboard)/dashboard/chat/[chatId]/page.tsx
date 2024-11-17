@@ -9,9 +9,9 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     chatId: string;
-  };
+  }>;
 }
 
 async function getChatMessages(chatId: string) {
@@ -36,7 +36,7 @@ async function getChatMessages(chatId: string) {
 }
 
 const page = async ({ params }: PageProps) => {
-  const { chatId } = params;
+  const { chatId } = await params;
   const session = await getServerSession(authOptions);
 
   if (!session) {
