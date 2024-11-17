@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
 import { FC, useState } from 'react'
@@ -18,7 +19,7 @@ const AdminPage: FC = () => {
     { id: 2, title: "Organize welcome party", user: "Jane Smith", date: "2023-06-12", fileUrl: "#" },
     { id: 3, title: "Create social media content", user: "Mike Johnson", date: "2023-06-15", fileUrl: "#" },
   ])
-  setCompletedTasks([...completedTasks])
+  // setCompletedTasks([...completedTasks]) // Removed to prevent infinite re-renders
   // Dummy data for newsletter events
   const [events, setEvents] = useState([
     { id: 1, title: "Annual Tech Fest", date: "2023-07-15" },
