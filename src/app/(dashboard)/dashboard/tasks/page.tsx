@@ -10,9 +10,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "react-hot-toast"
 import { Upload, FileText, User } from 'lucide-react'
 
-interface TaskReportProps {}
 
-const TaskReportPage: FC<TaskReportProps> = () => {
+const TaskReportPage: FC = () => {
   const [file, setFile] = useState<File | null>(null)
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {

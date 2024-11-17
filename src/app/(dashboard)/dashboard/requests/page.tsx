@@ -1,4 +1,3 @@
-import AddFriendButton from "@/components/AddFriendButton";
 import FriendRequests from "@/components/FriendRequests";
 import { fetchRedis } from "@/helpers/redis";
 import { authOptions } from "@/lib/auth";

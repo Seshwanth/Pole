@@ -8,18 +8,17 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Download, Plus, Save } from 'lucide-react'
+import { Download, Plus} from 'lucide-react'
 
-interface AdminPageProps {}
 
-const AdminPage: FC<AdminPageProps> = () => {
+const AdminPage: FC = () => {
   // Dummy data for completed tasks
   const [completedTasks, setCompletedTasks] = useState([
     { id: 1, title: "Design club logo", user: "John Doe", date: "2023-06-10", fileUrl: "#" },
     { id: 2, title: "Organize welcome party", user: "Jane Smith", date: "2023-06-12", fileUrl: "#" },
     { id: 3, title: "Create social media content", user: "Mike Johnson", date: "2023-06-15", fileUrl: "#" },
   ])
-
+  setCompletedTasks([...completedTasks])
   // Dummy data for newsletter events
   const [events, setEvents] = useState([
     { id: 1, title: "Annual Tech Fest", date: "2023-07-15" },

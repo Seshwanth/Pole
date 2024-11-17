@@ -31,6 +31,7 @@ async function getChatMessages(chatId: string) {
     return messages;
   } catch (error) {
     notFound();
+    console.log(error);
   }
 }
 

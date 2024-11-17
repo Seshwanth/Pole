@@ -2,7 +2,6 @@
 import { FC, useRef, useState } from "react";
 import TextareaAutosize from "react-textarea-autosize";
 import Button from "./ui/Button";
-import { set } from "zod";
 import axios from "axios";
 import toast from "react-hot-toast";
 
@@ -25,6 +24,7 @@ const ChatInput: FC<ChatInputProps> = ({ chatPartner, chatId }) => {
         textareaRef.current?.focus()
     } catch (error) {
         toast.error('Something went wrong, please try again later')
+        console.log(error)
     }
     finally{
         setIsLoading(false);
